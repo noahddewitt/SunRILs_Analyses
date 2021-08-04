@@ -1,8 +1,8 @@
-#SunRILs data processing and analysis
+# SunRILs data processing and analysis
 
 Connected SunRILs population constructed from shared parents representing elite southeastern soft red winter wheat germplasm lines. The actual data for this project is contained in the ERSGGL database, but this repo should serve as documentation of the pipeline used to assemble genotype data and the analyses performed using that data. 
 
-##SNP Calling and Imputation
+## SNP Calling and Imputation
 
 Calling all lines together and using beagle imputation worked pretty well in the initial test run. Theoretically though, as we have a set of related inbred biparental populations, treating each population separately should give us better power to call SNP private to individual populations, filter SNP, and perform imputation. The following scripts were run in the listed order:
 
