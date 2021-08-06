@@ -7,7 +7,7 @@ for pop in $popNames
 	do echo "Starting Sungrains SNP calling based on pop ${pop} db" 
 
 	mkdir "${pop}_sungrains_production"
-	WKDIR="/home/gbg_lab_admin/Array_60TB/Wheat_GBS/SunRILs_Mar2021/diverseproductions/${pop}_sungrains_production"
+	WKDIR="/home/gbg_lab_admin/Array_60TB/Wheat_GBS/SunRILs_Mar2021/diverse_productions/${pop}_sungrains_production"
 
 	cd "$PL_DIR"
 	bash tassel_production.sh --workdir="${WKDIR}" \
@@ -36,7 +36,7 @@ for pop in $popNames
 
 	## Imputation with Beagle 5.1
 	cd "$PL_DIR"/imputation
-	bash simple_beagle_imputation_w_map.sh "${WKDIR}"/filt_and_imp_VCF/Sungrains_"{pop}"_preimp_filt.vcf.gz SynOp_RIL906_v1.0_GBS_monotonic.map 6
+	bash simple_beagle_imputation_w_map.sh "${WKDIR}"/filt_and_imp_VCF/Sungrains_"${pop}"_preimp_filt.vcf.gz SynOp_RIL906_v1.0_GBS_monotonic.map 6
 
 	## Post-imputation filtering
 	cd ..
